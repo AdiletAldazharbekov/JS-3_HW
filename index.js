@@ -58,21 +58,68 @@ function checkAge1(age) {
 // Как правильно округлить 6.35?
 
 // Ответ:
+ console.log(6.35.toFixed(1))
+ console.log(1.35.toFixed(1))
+ console.log((6.35+0.01).toFixed(1))
+//  или лучше использовать round()
+console.log(Math.round(6.35*10)/10)
+
  
-
-
-
-
-
-
 // Math
 //  1 .Даны числа 4, -2, 5, 19, -130, 0, 10. Найдите минимальное и максимальное число
+console.log("Максимальное число массива.")
+console.log(Math.max(4, -2, 5, 19, -130, 0, 10))
+console.log("Минимальное число массива.")
+console.log(Math.min(4, -2, 5, 19, -130, 0, 10))
+
+
+
 // 2. Выведите на экран случайное целое число от 1 до 100.
+console.log("случайное целое число от 1 до 100.")
+console.log(Math.ceil( Math.random()*100))
+
+
 // 3.Заполните массив 10-ю случайными целыми числами. (Подсказка: нужно воспользоваться циклами for или while). 
- 
+console.log("10 случайных чисел для массива. через - for")
+let arr1=[]
+let i=0
+let n=10
+for (i=0; i<n; i++){
+arr1[i]=(Math.ceil(Math.random()*100)*(i+1))
+console.log(arr1[i])
+}
+
+console.log("10 случайных чисел для массива. через - while")
+i=0
+while(i<n) {
+arr1[i]=(Math.ceil(Math.random()*10)+arr1[i])
+console.log(arr1[i])
+i++;
+}
+
+console.log("10 случайных чисел для массива. через - do-while")
+i=0
+do {
+arr1[i]=(Math.ceil(Math.random()*10)-arr1[i])
+console.log(arr1[i])
+i++;
+}while(i<n)
+
+
+
 // toString
 // 1.Создайте массив с числовыми значениями   
-// const arr = [ 1,2,3,4,5]
+const arr3 = [ 1,2,3,4,5]
 // Преобразуйте числовые значения в строку  и выведите в console.log
-// 2. Если вы напишите в console.log (+true) что покажет консоль 
+console.log("Преобразовал числовые значения массива в строку")
+for (let i=0; i<arr3.length;i++){
+  let a=arr3[i].toString()
+  console.log(typeof a, a)
+}
+
+// 2. Если вы напишите в console.log (+true) что покажет консоль
+// Число 1
+console.log(+true) 
 // 3.Если вы напишите в console.log (+false) что покажет консоль 
+// Число 0
+console.log(+false)
